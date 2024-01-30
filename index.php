@@ -9,15 +9,20 @@
     <body>
         <h1 class="text-center p-3">PHP & MySQL</h1>
         <div class="container-fluid row">
-            <form class="col-4 p-3">
-                <h3 class="text-secondary p-3">Formulario</h3>
-                <div class="form-group row">
+
+            <form class="col-4 p-4" method="POST">
+                <h3 class="text-secondary p-3 text-center">Formulario</h3>
+                <?php
+                    include "modelo/conexion.php";
+                    include "controlador/registro_persona.php";
+                ?>
+                <div class="mb-3">
                     <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
-                    <div class="col-sm-6">
-                        <input type="text" id="name" class="form-control">
-                    </div>
+                    <input type="text" class="form-control" name="nombre">
                 </div>
+                <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
             </form>
+
             <div class="col-8 p-4">
                 <table class="table">
                     <thead>
@@ -42,6 +47,7 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
         
 
