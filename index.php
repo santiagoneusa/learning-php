@@ -26,13 +26,19 @@
                         <th scope="col">Name</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
+                    
+                        <?php
+                            include "modelo/conexion.php";
+                            $sql = $conexion -> query(" select * from pruebas");
+                            while ($datos = $sql->fetch_object()) { ?>
+                                <tr>
+                                <td><?= $datos->userId ?></td>
+                                <td><?= $datos->username ?></td>
+                                </tr>
+                        <?php } ?>
+
                     </tbody>
                 </table>
             </div>
