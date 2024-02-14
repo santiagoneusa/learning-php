@@ -16,7 +16,7 @@
         <!-- Header -->
         <nav class = "navbar navbar-expand-lg navbar-dark bg-secondary py-4">
             <div class = "container">
-                <a clas = "navbar-brand" href = "#">Online Store</a>
+                <a class = "navbar-brand" href = "#">Online Store</a>
                 <button class = "navbar-toggler"
                         type = "button"
                         data-bs-toggle = "colapse"
